@@ -1,0 +1,26 @@
+<!-- frontend/faculty_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Faculty Dashboard</h1>
+        <div id="facultyProfile">
+            <h2>Manage Class List</h2>
+            <ul id="classList"></ul>
+            <h2>Update Profile</h2>
+            <form id="facultyProfileForm">
+                <label for="officeHours">Office Hours</label>
+                <input type="text" id="officeHours" name="officeHours">
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
