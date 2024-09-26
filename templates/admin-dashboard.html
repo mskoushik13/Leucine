@@ -4,7 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 450px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 30px;
+        color: #333;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 22px;
+        color: #555;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #007bff;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      label {
+        font-size: 14px;
+        color: #444;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+        width: 100%;
+      }
+      input, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+      input:focus, select:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+      button {
+        padding: 12px 18px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #recordsList {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -12,7 +90,7 @@
       <h2>Manage Records</h2>
       <form id="manageRecordsForm">
         <label for="username">Username:</label>
-        <input type="text" id="username" required />
+        <input type="text" id="username" placeholder="Enter username" required />
         <label for="role">Role:</label>
         <select id="role" required>
           <option value="Student">Student</option>
@@ -21,7 +99,9 @@
         <button type="submit">Add/Update</button>
       </form>
       <h2>Records List</h2>
-      <div id="recordsList"></div>
+      <div id="recordsList">
+        <!-- List of records will be dynamically generated here -->
+      </div>
     </div>
 
     <script src="js/admin.js"></script>
