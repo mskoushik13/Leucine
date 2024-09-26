@@ -11,9 +11,12 @@ CRUD operations for profiles and records.
 Fetching student and faculty details.
 Dashboard data aggregation.
 Implement data validation and error handling.
+![image](https://github.com/user-attachments/assets/444e50e6-9750-4b68-83bc-cf7c0695563e)
+![image](https://github.com/user-attachments/assets/683a8cc0-d9b4-4f1b-9413-1ea3320a2648)
+![image](https://github.com/user-attachments/assets/bdf8ac38-8126-4e7c-8f11-4751f0dad493)
+![image](https://github.com/user-attachments/assets/174c7e81-a437-4089-a184-5a05d2e78a2c)
 
-![image](https://github.com/user-attachments/assets/ecf8b344-a6f3-4e52-8f14-1dec85ac9530)
-![image](https://github.com/user-attachments/assets/8efa1124-642e-415b-b29f-6d5b794aabfc)
-![image](https://github.com/user-attachments/assets/0d5733d4-ff17-4203-b321-622a3defb941)
-![image](https://github.com/user-attachments/assets/736d576c-f14c-4042-8df8-c7cec6f647e9)
+
+
+
 
