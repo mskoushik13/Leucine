@@ -2,10 +2,14 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path'); // Import the path module
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join('/templates')));
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -33,19 +37,16 @@ app.post('/login', (req, res) => {
     });
 });
 
-// GET API to retrieve user by username and password
-app.get('/api/user', (req, res) => {
-    const { username, password } = req.query; // Retrieve username and password from query parameters
-    const query = 'SELECT * FROM User WHERE username = ? AND password = ?';
-    db.query(query, [username, password], (err, results) => {
-        if (err) return res.status(500).send(err);
-        if (results.length > 0) {
-            res.json({ success: true, user: results[0] });
-        } else {
-            res.json({ success: false, message: 'User not found or invalid credentials' });
+const newLocal = 'templates/index.html';
+// Root route to serve the index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(newLocal), (err) => {
+        if (err) {
+            res.status(err.status).end();
         }
     });
 });
+
 
 // Start the server
 app.listen(3000, () => {

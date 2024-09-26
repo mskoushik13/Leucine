@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      .card {
+        background: #f9f9f9;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #4cae4c;
+      }
+
+      img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      strong {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Dashboard</h1>
+
+      <div id="profile" class="card">
+        <h2>Your Profile</h2>
+        <img id="profilePhoto" src="" alt="Profile Photo" />
+        <p><strong>Name:</strong> <span id="studentName"></span></p>
+        <p><strong>Email:</strong> <span id="studentEmail"></span></p>
+        <p><strong>Department:</strong> <span id="studentDepartment"></span></p>
+        <p><strong>Year:</strong> <span id="studentYear"></span></p>
+      </div>
+
+      <h2>Search for Other Students</h2>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by name, department, or year"
+      />
+      <button id="searchButton">Search</button>
+      <div id="searchResults" class="card"></div>
+
+      <h2>Contact Faculty Advisors</h2>
+      <div id="facultyAdvisors" class="card"></div>
+    </div>
+
+    <script src="js/student.js"></script>
+  </body>
+</html>
